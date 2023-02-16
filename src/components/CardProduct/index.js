@@ -5,7 +5,6 @@ import ListGroup from 'react-bootstrap/ListGroup';
 function CardProduct({ data }) {
     return (
         <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
             <Card.Title>{data.name}</Card.Title>
             <Card.Text>{data.description}</Card.Text>

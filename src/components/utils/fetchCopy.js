@@ -1,7 +1,7 @@
-export const fetchCopy = (items) => {
+export const fetchCopy = (products) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(items);
-        }, 3000);
+            resolve(products);
+        }, 1000);
     });
 };

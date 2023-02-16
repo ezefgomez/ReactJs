@@ -2,6 +2,7 @@ export const mockedProducts = [
     {
         id: 1,
         category: "vestimenta",
+        img: "https://http2.mlstatic.com/D_NQ_NP_719389-MLA46969067251_082021-O.webp",
         name: "Buzo canguro",
         description: "Buzo polar para invierno de color negro",
         stock: "Cantidad: " + 50,
@@ -10,6 +11,7 @@ export const mockedProducts = [
     {
         id: 2,
         category: "vestimenta",
+        img: "https://johnfoosar.vteximg.com.br/arquivos/ids/159437-1000-1000/176_MEET_NEW_GREY_e-comm_01--1-.jpg?v=637922102702200000",
         name: "Zapatillas urbanas",
         description: "Zapatillas estilo Jhon foos",
         stock: "Cantidad: " + 45,
@@ -18,6 +20,7 @@ export const mockedProducts = [
     {
         id: 3,
         category: "accesorio",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnELDwImE2wpqGrPhZPAZzG_DoR23NzNWVMA&usqp=CAU",
         name: "Billetera",
         description: "Billetera unisex de distintos colores de cuero",
         stock: "Cantidad: " + 30,
@@ -26,6 +29,7 @@ export const mockedProducts = [
     {
         id: 4,
         category: "medicinales",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIp74GD4T6VezLQWSKWT1fx3H5J0S50cobPQ&usqp=CAU",
         name: "Hiervas medicinales",
         description: "Bolsas de hiervas medicinales para hacer Té o otras infuciones",
         stock: "Cantidad: " + 60,
@@ -34,6 +38,7 @@ export const mockedProducts = [
     {
         id: 5,
         category: "accesorio",
+        img: "https://hernandezhombres.com.ar/images/virtuemart/product/DSC_1001%20(Large).jpg",
         name: "Cintos",
         description: "Cintos de cuero con tachas para motoqueros",
         stock: "Cantidad: " + 30,
@@ -42,6 +47,7 @@ export const mockedProducts = [
     {
         id: 6,
         category: "vestimenta",
+        img: "https://http2.mlstatic.com/D_NQ_NP_659140-MLA48407176235_122021-W.jpg",
         name: "Remera VANS",
         description: "Remera VANS de hombre, ideal para deportes",
         stock: "Cantidad: " + 20,
@@ -50,6 +56,7 @@ export const mockedProducts = [
     {
         id: 7,
         category: "medicinales",
+        img: "https://2.bp.blogspot.com/-Qej-P_jSf-8/XDhxK0Yxm5I/AAAAAAAAOcI/jt1fxIP_T-AC5JHpWmU7uG4RO0ZgYVZIQCLcBGAs/s1600/propiedades%2Bmedicinales%2Bdel%2Boregano%2B-%2Bcopia.png",
         name: "Aceites medicinales",
         description: "Aceites de cannabis para ayuda terapeutica",
         stock: "Cantidad: " + 10,
