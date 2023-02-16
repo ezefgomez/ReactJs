@@ -1,27 +1,36 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import CardProduct from "../../components/CardProduct/index";
+import React, { useState } from "react";
 import { mockedProducts } from "../../components/utils/products";
-import { fetchCopy } from "../../components/utils/fetchCopy";
+import CardProduct from "../../components/CardProduct/index";
 
 const ProductCategory = () => {
-    const [product, setProducts] = useState({});
 
-    let { category } = useParams();
+    const [products, setProducts] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState("");
 
-    useEffect(() => {
-
-        fetchCopy(mockedProducts).then((result) => setProducts(result))
-    
-    }, [category])
+    const filterProductsByCategory = (category) => {
+        setSelectedCategory(category);
+        const filteredProducts = mockedProducts.filter((product) => product.category === category);
+        setProducts(filteredProducts);
+    };
 
     return (
-        <div className="CharacterList-detail">
-        <div key={product.category}>
-            <CardProduct data={product} />
-        </div>
+        <div>
+            <div>
+                <button onClick={() => filterProductsByCategory("vestimenta")}>Vestimenta</button>
+                <button onClick={() => filterProductsByCategory("accesorio")}>Accesorios</button>
+                <button onClick={() => filterProductsByCategory("medicinales")}>Medicinales</button>
+            </div>
+            <div>
+                {selectedCategory !== "" && <p>{selectedCategory}</p>}
+                {products.length > 0 ? (
+                products.map((product) => <CardProduct data={product} key={product.id} />)
+                ) : (
+                <p>No hay productos disponibles para la categoría seleccionada</p>
+                )}
+            </div>
         </div>
     );
-    };
+
+}
 
 export default ProductCategory;
