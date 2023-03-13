@@ -1,0 +1,57 @@
+.table{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;    
+    justify-content: flex-start;
+    border: 0;
+}
+
+.table tbody{
+    width: 95vw;
+    border: 0;
+}
+
+.table1{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;    
+    justify-content: flex-start;
+    border: 0;
+}
+
+.table1 tbody{
+    width: 95vw;
+    border: 0;
+}
+
+.celdaIndividual{
+    border: 1px solid black;
+    text-align: center;
+    width: 15vw;
+    font-size: 12px;
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.letraTotal{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.carritoVacio{
+    margin: 40px;   
+}
+
+h1{
+    overflow-y: hidden;
+}

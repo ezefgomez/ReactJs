@@ -1,0 +1,17 @@
+.carrito{
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+}
+
+.circulo{
+    border-radius: 70%;
+    background-color: rgba(226, 43, 43, 0.637);
+    position: relative;
+    top: 40px;
+    left: 30px;    
+    width: 35px;
+    height: 20px;
+    font-weight: bold;
+    text-align: center;    
+}

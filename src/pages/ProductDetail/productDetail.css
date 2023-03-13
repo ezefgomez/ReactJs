@@ -1,0 +1,10 @@
+.Spinner {
+	display: flex;
+	justify-content: center;
+	margin: 40;
+}
+
+.acomodarDetalle{
+    display: flex;
+    justify-content: center;
+}

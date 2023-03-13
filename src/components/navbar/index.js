@@ -3,11 +3,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from "../../Images/PapabearLogo.png"
-import CartWidget from '../CartWidget/CartWidget';
+// import { useSelector } from 'react-redux';
+// import { FaShoppingCart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidtget';
 
 
-
-function navbar() {
+function Barra() {
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -20,19 +22,17 @@ function navbar() {
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
                 <NavDropdown title="Productos" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="/detail/vestimenta">Vestimenta</NavDropdown.Item>
+                    <Link to="/category/vestimenta">
+                        Vestimenta
+                    </Link>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="/detail/accesorios">Accesorios</NavDropdown.Item>
+                    <Link to="/category/accesorio">
+                        Accesorios
+                    </Link>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="/detail/medicinales">Productos medicinales</NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="#pricing"> Promociones </Nav.Link>
-                <NavDropdown title="Contacto" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Consultas privadas</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.2">Encontranos en el mapa</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.3">Llamanos</NavDropdown.Item>
+                    <Link to="/category/medicinales">
+                        Productos medicinales
+                    </Link>
                 </NavDropdown>
             </Nav>
             <Nav>
@@ -45,12 +45,24 @@ function navbar() {
                 </NavDropdown>
             </Nav>
             </Navbar.Collapse>
+            <Nav.Link href="/carrito">
+                <CartWidget />
+            </Nav.Link>
         </Container>
-        <button>
-            <CartWidget />
-        </button>
         </Navbar>
     );
 }
 
-export default navbar;
+export default Barra;
+
+/*
+    const cart = useSelector((state) => state.cart);
+    const cartCount = cart.length;
+
+
+
+
+<FaShoppingCart style={{ fontSize: '2em', backgroundColor: 'white' }} />
+    {cartCount > 0 && <span className="badge">{cartCount}</span>}
+
+*/

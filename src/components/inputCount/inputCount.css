@@ -1,0 +1,10 @@
+.boton{
+    padding: 5px;
+    margin: 30px 15px;
+}
+
+.display{
+    width: 30px;
+    height: 20px;
+    overflow-y: hidden;    
+}

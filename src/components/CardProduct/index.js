@@ -1,18 +1,24 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { Link } from 'react-router-dom';
+import "./styles.css";
 
-function CardProduct({ data }) {
+
+function CardProduct({ productsdata }) {
+
+
     return (
-        <Card style={{ width: '18rem' }}>
-        <Card.Body>
-            <Card.Title>{data.name}</Card.Title>
-            <Card.Text>{data.description}</Card.Text>
+        <Card className="card" style={{ width: '18rem' }}>
+        <Card.Body className='cardBody'>
+            <Card.Img style={{ height: '18rem' }} variant="top" src={productsdata.img} />
+            <Link to={`/detalle/${productsdata.id}`}>
+            <Card.Title className='nombreArticulo'>{productsdata.name}</Card.Title>
+            </Link>
+            <Card.Text>{productsdata.description}</Card.Text>
             <ListGroup className="list-group">
-                <ListGroup.Item>{data.stock}</ListGroup.Item>
-                <ListGroup.Item>{data.price}</ListGroup.Item>
+            <ListGroup.Item>{"Cantidad: " + productsdata.stock}</ListGroup.Item>
+            <ListGroup.Item>{"$" + productsdata.price}</ListGroup.Item>
             </ListGroup>
-            <Button variant="primary">Agregar al carrito</Button>
         </Card.Body>
         </Card>
     );
